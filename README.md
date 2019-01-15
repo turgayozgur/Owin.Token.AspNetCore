@@ -1,4 +1,4 @@
-# Tossit #
+# Owin.Token.AspNetCore #
 [![Latest version](https://img.shields.io/nuget/v/Owin.Token.AspNetCore.svg)](https://www.nuget.org/packages/Owin.Token.AspNetCore)
 
 Simple .NET Core library to reading OWIN based OAuth tokens. Just implemented the code that deserialize OWIN based token to ticket. So, you can Authenticate your API user by old tokens on your ASPNET Core application. Use the current OAuth mechanism of ASPNET Core for the new token generations.
