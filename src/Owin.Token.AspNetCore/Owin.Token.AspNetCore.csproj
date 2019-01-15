@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Version>2.0.0</Version>
+        <Description>.NET Core library to reading OWIN based OAuth tokens.</Description>
+        <Copyright>Copyright (c) 2019 Turgay Özgür</Copyright>
+        <Authors>Turgay Özgür</Authors>
+        <AssemblyName>Owin.Token.AspNetCore</AssemblyName>
+        <PackageId>Owin.Token.AspNetCore</PackageId>
+        <PackageTags>OWIN;core;aspnetcore;token</PackageTags>
+        <PackageProjectUrl>https://github.com/turgayozgur/Owin.Token.AspNetCore</PackageProjectUrl>
+        <License>https://opensource.org/licenses/MIT</License>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>git://github.com/turgayozgur/Owin.Token.AspNetCore</RepositoryUrl>
+    </PropertyGroup>
+
+</Project>
