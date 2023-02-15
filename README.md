@@ -56,10 +56,12 @@ Implement the LegacyOAuthSecurityTokenHandler
 public class LegacyOAuthSecurityTokenHandler : SecurityTokenHandler
 {
     private readonly LegacyTokenAuthenticationOptions _options;
+    private readonly JwtSecurityTokenHandler _tokenHandler;
 
     public LegacyOAuthSecurityTokenHandler(LegacyTokenAuthenticationOptions options)
     {
         _options = options;
+        _tokenHandler = new JwtSecurityTokenHandler();
     }
 
     public override bool CanValidateToken => true;
@@ -80,7 +82,7 @@ public class LegacyOAuthSecurityTokenHandler : SecurityTokenHandler
 
         var claimsIdentity = new ClaimsIdentity(ClaimTypes.Email).AddClaims(ticket.Identity.Claims);
         
-        validatedToken = default(SecurityToken);
+        validatedToken = _tokenHandler.CreateJwtSecurityToken(); //Prevent NullReferenceException
         
         return new ClaimsPrincipal(claimsIdentity);
     }
